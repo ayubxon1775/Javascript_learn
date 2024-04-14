@@ -7,6 +7,96 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- 
+
+        
+ 1. "getElementById"  -  Javascriptda HTML dokumentdagi elementlarni biror bir "id" atributiga bo'lgan qiymat orqali topish uchun ishlatiladi.
+
+ 2. HTML da Javascript kodi " <script> </script> " kodi orasiga kiritiladi.
+
+ 3. Tashqi skriptga 3 xil usulda murojaat qilish mumkin.
+        . To'liq URL bilan (to'liq veb manzil)
+        . Fayl yo'li bilan (masalan, /js/)
+        . Hech qanday yo'lsiz
+
+ 4. Javascript malumotlarni  turli yo'llar bilan "ko'rsatish" mumkin.
+        . "innerHTML " dan foydalanib HTML elementiga yozish.
+        . "document.write()" dan foydalanib HTML chiqishiga yozish.
+        . "window.alert()" dan foydalanib ogohlantirish qutisiga yozish.
+        . "console.log()" dan foydalanib brauzer konsoliga yozish.
+
+ 5. HTML elementiga kirish uchun JavaScript "document.getElementById(id)" usuldan foydalanish mumkin.
+        . "id" atribut HTML elementini belgilaydi.
+        . "innerHTML" xususiyat HTML tarkibini belgilaydi.
+
+            misol uchun :
+
+            <h1>Salom ayubxon</h1>
+            <p>bu mening birinchi dasturim</p>
+            <p id="demo"></p>
+
+             <script>
+                document.getElementById('demo').innerHTML = 5 + 6;
+            </script>
+           
+            IZOH :
+                HTML elementining innerHTML xususiyatini o'zgartirish HTMLda malumotlarni ko'rsatishning keng tarqalgan usuli hisoblanadi.
+
+ 6."document.write()" dan foydalanish
+
+            <h1>salom ayubxon</h1>
+            <p>bu mening birinchi kodim</p>
+        
+            <script>
+                document.write ( 5 + 6 )
+            </script>    
+
+            IZOH: 
+            HTML hujjati yuklangandan so'ng "document.write()" dan foydalanish barcha mavjud HTML ni o'chiradi.
+            !!! document.write() usuli faqat sinov uchun ishlatilish kerak.
+
+ 7."window.alert()" dan foydalanish
+            Malumotlarni ko'rsatish uchun ogohlantirish oynasidan foydalanishingiz mumkin.           
+
+               misol uchun: 
+
+            <h2> Salom ayubxon</h2>
+            <p>bu mening birinchi dasturim</p>
+
+            <script>
+                window.alert(5 + 6);
+            </script>   
+
+              !!! Siz "window" kalit so'zini o'tkazib yuborishingiz mumkin.
+              !!! JavaScript oyna obyekti global qamrov obyektidir.
+              !!! Bu o'zgaruvchilar xususiyat va usullar sukut bo'yicha oyna obyektiga tegishli ekanligini anglatadi.
+              !!! Bu shuningdek "window" kalit so'zini belgilash ixtiyoriy ekanligini ham bildiradi.
+   
+ 8. "console.log()" dan foydalanish 
+              Nosozliklarni tuzatish uchun siz console.log() malumotlarni ko'rsatish uchun brauzerda usulni chiqarishingiz mumkin.
+                              
+                misol uchun:
+                <h2> Salom ayubxon</h2>
+                <p>bu mening birinchi dasturim</p>
+
+                <script>
+                    console.log(5 + 6);
+                </script> 
+                
+      
+ 9.  Javascriptda chop etish obyekti yoki chop etish usullari mavjud emas
+                Faqatgina istisno tariqasida "window.print()" joriy oynaning mazmunini chop etish uchun brauzerda usulni chiqarishingiz mumkin.
+
+                misol uchun : 
+
+                <h2> Salom ayubxon</h2>
+                <p>bu mening birinchi dasturim</p>
+    
+                <button onclick="window.print()">bu yerga bosing</button>
+    
+                
+    -->
+     
     
 </body>
 </html>
