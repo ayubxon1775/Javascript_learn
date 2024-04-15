@@ -8,7 +8,7 @@
 </head>
 <body>
     <!-- 
-
+        Bismillahir Rohmanir Rohim
         
  1. "getElementById"  -  Javascriptda HTML dokumentdagi elementlarni biror bir "id" atributiga bo'lgan qiymat orqali topish uchun ishlatiladi.
 
@@ -93,10 +93,117 @@
                 <p>bu mening birinchi dasturim</p>
     
                 <button onclick="window.print()">bu yerga bosing</button>
-    
+
+ 10.JavaScript bayonotlari quyidagilardan iborat:
+                Qiymatlar, operatorlar, ifodalar kalit so'zlar va sharhlar
                 
-    -->
-     
+11.JavaScript iboralarini kod bloklarida jingalak qavslar ichida {...} guruhlash mumkin.
+
+                misol uchun : 
+
+                <h1>ayubxon</h1>
+                <h1>ayubxon</h1>
+
+                <button onclick="myFunction()">bu yerga bos</button>
+
+                <p id="demo1"></p>
+                <p id="demo2"></p>
+
+                <script>
+                  function myFunction () {
+
+                      document.getElementById('demo1').innerHTML = 'hello dolly'
+                     document.getElementById('demo2').innerHTML = 'hello ayubxon'
+                  }
+                    </script>
+
+12.Kalit so'zlar royxati.
+                . "var" - O'zgaruvchini elon qiladi.
+                . "let" - Blok o'zgaruvchini elon qiladi.
+                . "const" - Blok konstantasini elon qiladi.
+                . "if" - Shart bo'yicha bajarilishi kerak bo'lgan bayonotlar blokini belgilaydi.
+                . "switch" - Turli holatlarda bajarlishi kerak bo'lgan bayonotlar blokini belgilaydi.
+                . "for" - Loopda bajarilishi kerak bo'lgan bayonotlar blokini belgilaydi.
+                . "function" - Funksiyani elon qiladi.
+                . "return" - Funksiyadan chiqadi.
+                . "try" - Bayonotlar blokiga xatolarni qayta ishlashni amalga oshiradi.
+                   
+                    !!! Javascript kalit so'zlar zaxiralangan kalit so'zlar hisoblanib ularni o'zgaruvchilar nomi sifatida ishlatib bolmaydi.
+13.JavaScript sintaksisi ikki turdagi qiymatlarni belgilaydi.
+                . Ruxsat etilgan qiymatlar. - Literals deb ataladi.
+                . O'zgaruvchan qiymatlar. - O'zgaruvchilar deb ataladi.
+
+                .Ruxsat etilgan (literallar) qiymatlar uchun ikkita eng muhim sintaksis qoidalar
+                    1.Raqamlar - o'nli yoki o'nli kasrsiz yoziladi.
+                    2.Sartlar - ikki yoki bitta tirnoq ichida yozilgan matndir.
+
+                .Dasturlashda o'zgaruvchilar malumotlar qiymatlarini saqlash uchun ishlatiladi.
+                .JavaScript o'zgaruvhchilarini elon qilish uchun "var", "let", "const" kalit so'zlaridan foydaliniladi.
+                .O'zgaruvchilarga qiymat berish uchun tenglik " = " belgisi ishaltiladi.
+                    misol uchun 
+                    let name = 'ayubxon'
+
+                .JavaScript qiymatlarni hisoblash uchun arifmetik operatorlardan ( +  -  *  / ) foydalaniladi.
+
+                    misol uchun: 
+
+                    (5 + 6 )* 10 
+                .JavaScript o'zgaruvchilarga qiymatlarni belgilash uchun tayinlash operatoridan ( = ) foydalanadi.
+                    
+                    misol uchun:
+
+                    let = x, y
+                    x = 5;
+                    y = 6;
+                .JavaScript kalit so'zlari bajariladigan harakatlarni aniqlash uchun ishlatiladi.
+                ."let",var kalit so'z brauzerga o'zgaruvchilarni yaratishni aytadi.
+
+                    misol uchun:
+
+                    let x, y
+                    x = 5 + 6
+                    y = x * 10
+
+                    var x, y
+                    x = 5 + 6
+                    y = x * 10
+
+                    bu misollarda var , let dan foydalanish bir xil natija beradi.
+
+ 14.JavaScript sharxlari   
+                    // ikki qirrali chiziqdan keyin yoki orasidagi kod /* va sharx */ sifatida qabul qilinadi.
+
+                    !!! Sharhlar etiborga olinmaydi va bajarilmaydi,
+
+                        misol uchun
+
+                        // x = 6
+
+ 15.JavaScript identifikatori/ismlari
+                    identifikatorlar javascript nomlaridir.
+                    JavaScript nomi quyidagilar bilan nomlanishi kerak.
+                        . Harf(AZ yoki az)
+                        . Dollar belgisi ($)
+                        . Yoki pastki chiziq (_)
+                        !!! keyingi belgilar harflar raqamlar pastki chiziq yoki dollor belgilari bolishi mumkin.
+                        !!! Nomlarning birinchi belgisi sifatida raqamlarga ruxsat berilmaydi.
+                        !!! shunday qilib JavaScript identifikatorlarni raqamalardan osongina ajrata oladi.
+ 16.JavaScript katta kichik harflarga sezgir.
+                        
+                    lastName , lastname boshqa boshqa o'zgaruvchilar hisoblanadi.
+                    Camel Case 
+
+                    misol uchun: 
+
+                    myName, surName, masterCard
+ 17. JavaScript "Unicode" belgilar majmuasidan foydalanadi.
+                    Unicode (deyarli) dunyodagi barcha belgilar, tinish belgilari va belgilarni qamrab oladi.
+                                                                                    
+
+                -->
+
+
+            
     
 </body>
 </html>
