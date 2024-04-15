@@ -198,12 +198,105 @@
                     myName, surName, masterCard
  17. JavaScript "Unicode" belgilar majmuasidan foydalanadi.
                     Unicode (deyarli) dunyodagi barcha belgilar, tinish belgilari va belgilarni qamrab oladi.
-                                                                                    
+
+
+ 18.O'zgaruvchilar bu malumotlarni saqlash uchun kanteynerlardir.
+                    JavaScript o'zgaruvchilarini 4 ta usulda elon qilish mumkin.
+                        . Avtomatik ravishda 
+                                misol uchun 
+                                    x = 5
+                                    y = 6
+                                    !!! foydalanishdan oldin har doim o'zgaruvchilarni elon yaxshi amaliyot hisoblanadi.
+
+                        . 'var' foydalanish
+                                misol uchun 
+                                    var x = 5
+                                    var y = 6
+                                        !!! 'var' kalit sozi 1995-2015 yilgacha barcha javascript kodlarida ishlatilgan.
+                                        !!! 'var' klait sozi faqat eski brauzerlarda ishlatilgan kodlarda yozilishi kerak.
+
+                        . 'let' foydalanish
+                                misol uchun
+                                    let x = 5
+                                    let y = 6
+                                        !!! let va const kalit sozlari 2015 yilda Javascript dasturiga qo'shilgan.
+
+
+                        . 'const' foydalanish
+
+                                misol uchun 
+                                    const x = 5
+                                    const y = 6
+
+                        . Aralash misollar
+                                misol uchun 
+                                    const x = 5
+                                    const y = 6
+                                    let total = x + y
+
+ 19. 'var', 'let', 'const' o'zgaruvchilarini qachon ishlatish kerak.
+
+                        1. Har doim o'zgaruvchilarni elon qiling.
+                        2. Agar qiymat o'zgarmasligini hohlasangiz unda 'const' kalit so'zini ishlating.
+                        3. Turni (massiv va obyektni) o'zgartirmaslik kerak bo'lsa 'const' kalit so'zini ishlating.
+                        4. Agar 'const' dan foydalana olmasligingizgina 'let' kalit so'zidan foydalaning.
+                        5. Agar siz eski brauzerdan foydalanayotgan bo'lsangizgina 'var' kalit so'zidan foydalaning.
+                                O'zgaruvchiga qiymat berilmagan bo'lsa bu "undifined" hisoblanadi.
+                                    misol uchun
+
+                                        <p id="demo"></p>
+                
+                                    <script>
+                                        let name = 'ayubxon';
+                                        document.getElementById('demo').innerHTML = name
+                                    </script>
+                                !!! Skript boshida barcha o'zgaruvchilarni elon qilish yaxdhi dasturlash amamliyotidir.
+ 20.Bitta bayonotda kop o'zgaruvchilar elon qilish mumkin.
+                        Bayonotni "let" bilan boshlang va 'o'zgaruvchilarni' vergul bilan ajrating.
+                        
+                                    misol uchun:
+                                    let person = "John Doe", carName = 'Volvo',price = 200;
+
+                                    !!! Qiymatsiz elon qilingan "O'zgaruvchi" "undifined" qiymatga ega bo'ladi.
+                                        misol uchun:
+                                            
+                                            let carName = ;
+
+                                    !!! var kalit so'zi bilan elon qilingan o'zgaruvchini qayta elon qilsangiz u o'z qiymatini yoqotmaydi.
+                                        misol uchun:
+                                            var carName = 'Volvo';
+                                            var carName = ;
+
+                                    !!! 'let' yoki 'const' bilan elon qilingan o'zgaruvchini qayta elon qilib bo'lmaydi.
+                                        misol uchun
+                                            let carName = 'Volvo';
+                                            let carName = ;
+                                           
+ 21. JavaScriptda dollor belgisi $
+                                    Javascriptda $ belgisi harf sifatida tan olinganligi bois u haqiqiy o'zgaruvchi nomlari hisoblanadi.
+                                        misol uchun:
+                                            let $ = 'hello world'  
+                                            let $$$ = 5
+                                            let $myMoney = 100
+                                        !!! JavaScriptda $ belgisidan foydalanish unchlik keng tarqalgan emas.
+  
+ 22. JavaScriptda _ pastki chiziqcha
+                                      Javascriptda _ belgisi harf sifatida tan olinganligi bois u haqiqiy o'zgaruvchi nomlari hisoblanadi.
+                                        misol uchun:
+                                            let _lastName = 'hello world'  
+                                            let _xxx = 5
+                                            let _500 = 100
+                                        !!! JavaScriptda _ belgisidan foydalanish unchlik keng tarqalgan emas.
+                                        !!! lekin professional dasturchilar uni yashirin o'zgaruvchi sifatida ishlatishadi.
+                                        
+                                    
+
+
+
 
                 -->
 
-
-            
+                
     
 </body>
 </html>
