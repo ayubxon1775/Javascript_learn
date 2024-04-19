@@ -149,3 +149,31 @@ function repeatStrThree(str) {
     return result;
 }
 // console.log(repeatStrThree(str));
+
+// 2.11 masala
+
+function probel(){
+    let text = 'ayubxon'
+    const myArray = text.split('');
+    text = "";
+    for (let i = 0; i < myArray.length; i++) {
+    text += myArray[i] + ' ' 
+}
+return text
+}
+// console.log(probel());
+
+// 2.12 masala
+
+
+function repeatnumber(){
+let number = 5
+let text = "ayubxon";
+const myArr = text.split("");
+text = " ";
+for (let i = 0; i < myArr.length; i++) {
+  text += myArr[i] + '*'.repeat(number) 
+}
+return text
+}
+console.log(repeatnumber());
