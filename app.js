@@ -176,4 +176,39 @@ for (let i = 0; i < myArr.length; i++) {
 }
 return text
 }
-console.log(repeatnumber());
+// console.log(repeatnumber());
+
+// 2.13 masala
+
+// let str = prompt('Lyuboy satr kiriting ichida raqamlardan foydalaning :')
+
+  function countNumber (str){
+    const arr = String(str).split('');
+    let n = arr.length;
+    let count = 0;
+    for(let i = 0; i < n; i++){
+      if(!isNaN(parseInt(arr[i]))){
+        count += 1
+      }
+    }
+    return count
+  }
+
+//   console.log(countNumber(str))
+
+// 2.14 masala
+
+let st = 'AbCdEE'
+
+function countNumber(st) {
+    const arr = st.split("");
+    let count = 0;
+    let n = arr.length;
+    for(let i = 0; i < n; i++){
+        if(/[A-Z]/.test(arr[i])){
+            count += 1;
+        }
+    }
+    return count;
+}
+console.log(countNumber(st))
