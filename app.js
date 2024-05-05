@@ -284,5 +284,5 @@ let person = {
     age: 30,
     gender: "male"
 };
-console.log(person.gender);// 30
+console.log(person.gender);// 30 
 
