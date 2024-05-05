@@ -211,4 +211,78 @@ function countNumber(st) {
     }
     return count;
 }
-console.log(countNumber(st))
+// console.log(countNumber(st))
+
+
+function fibonacci(n) {
+    if (n <= 1) {
+      return n;
+    } else {
+      return fibonacci(n - 1) + fibonacci(n - 2);
+    }
+  }
+  
+  // N-element Fibonacci ketma-ketligini chiqarish
+  function fibonacciSequence(n) {
+    let sequence = [];
+    for (let i = 0; i < n; i++) {
+      sequence.push(fibonacci(i));
+    }
+    return sequence;
+  }
+  
+  // Test qilish
+//   console.log(fibonacciSequence(6)); // Birinchi 10 Fibonacci sonlari
+  
+
+//   let y = 6 + "5";
+
+//   console.log(y);
+
+
+
+// console.log( 0.2 + 0.7 === 0.9);
+
+
+                // O'zgaruvchilar 
+// O'zgaruvchilar, dasturda malumotlarni saqlash va ularga murojaat qilish
+// uchun ishlatiladi.
+// Ularni elon qilish uchun "var", "let", "const" kalit so'zlaridan
+// birini ishlatamiz
+
+
+// O'zgaruvchi e'lon qilish
+var x = 5;
+let y = 10;
+const  PI = 3.14;
+
+// O'zgaruvchi qiymatini o'zgartirish
+x = 7;
+y = 15;
+// PI = 3.14159  // Xatolik const o'zgarmas o'zgaruvchi
+
+// O'zgaruvchilardan foydalanish
+console.log(x); // 7
+console.log(y); // 15
+console.log(PI); // 3.14
+
+// O'zgaruvchilar bilan hisoblash
+let z = x + y;
+console.log(z); // 22
+
+// Matn o'zgaruvchisi
+let name = "John";
+console.log("salom, " + name + "!"); // Salom, John!
+
+// Massiv o'zgaruvchisi
+let numbers = [1, 2, 3, 4, 5];
+console.log(numbers[0]); // 1
+
+// Obyekt o'zgaruvchisi
+let person = {
+    name: "John",
+    age: 30,
+    gender: "male"
+};
+console.log(person.gender);// 30
+
