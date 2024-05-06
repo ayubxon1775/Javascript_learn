@@ -286,3 +286,89 @@ let person = {
 };
 console.log(person.gender);// 30 
 
+// massiv o'zgaruvchilar
+let raqam = [1, 2, 3, 4, 5, 6]
+console.log(raqam[5]);
+
+// obyekt o'zgaruvchilar
+let pupil = {
+    name: 'ayubxon',
+    age: 23,
+    job: 'web developer'
+}
+console.log(pupil.age);
+
+                    // Function
+
+    // Funksiya tuzish. 
+// Funksiya "function" kalit so'zi bilan boshlanadi va
+// bitta yoki bir nechta parametrlarni qabul qilishi mumkin.Undan so'ng
+// qavs ochiladi va funksiya ichidagi kodlar yoziladi.
+// Misol uchun:
+
+    function salom () {
+        console.log('Salom, dunyo!');
+    }
+    salom(); // Salom, dunyo!
+
+    //Parametrlar va qaytadigan qiymatlar:
+// Funksiyalar parametrlarni qabul qilishi va qaytadigan qiymatlarni
+// olib qaytarishi mumkin.
+// Misol uchun:
+    // Decloration function
+   function hisobla (son1, son2) {
+    return son1 + son2
+   }
+   let result = hisobla(5, 5);
+   console.log(result); // 10
+
+   // Anonim funksiyalar: Expression function
+// Anonim funksiyalar nomi yo'q funksiyalardir va ular o'zgaruvchilarda saqlanadi.
+
+let hello = function(){
+    console.log('hello world');
+}
+hello()
+// Expression function parametr sifatida:
+
+let hellow = function(name){
+    console.log('Salom, ' + name + '!' );
+}
+hellow("John") // Salom, John!
+
+    // Obyekt sifatida funksiyalar:
+// Javascriptda funksiyalar obyekt sifatida yaratilishi mumkin.
+// Misol uchun:
+
+let uzunlik = function(a, b) {
+    return Math.sqrt(a * a + b * b);
+  };
+  
+  let kvadratUzunlik = uzunlik;
+  let kvadratNatija = kvadratUzunlik(3, 4);
+  console.log(kvadratNatija);
+
+  // !!! bu joyda "Math.sqrt" uzunlikni kvadrat ildizini qaytaradi.
+
+    // Funksiyalarning o'z ichiga funksiyalar qabul qilish va qaytarish:
+// JavaScript funksiyalarni o'z ichiga funksiyalarni qabul qilish va 
+// qaytarish imkonini beradi.
+// Bu qo'llanma funksiyalarning ko'p tomonlama qo'llanishiga imkon beradi.
+// Misol uchun :
+
+function engKatta(sonlar){
+    return function(a, b){
+        let n1 = a % sonlar;
+        let n2 = b % sonlar;
+        return (n1 < n2) ? a : b;
+    }
+}
+let engKatta5 = engKatta(5);
+console.log(engKatta5(13, 23)); // 23
+
+// !!! Funksiyalar Javascriptda amaliy ish qilishning asosiy qismidir.
+// Ular kodni taqsimlash imkonini beradi.
+
+
+
+
