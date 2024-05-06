@@ -387,3 +387,12 @@ function toCelsius (f){
 }
 let resultt = `bu bog'cha ${toCelsius(33)} boshqa bog'cha`;
 console.log(resultt); // bu bog'cha 4 boshqa bog'cha
+
+hollo = po =>  'hello world ' + po
+console.log(hollo("do'st"));
+
+console.log(myfunc());
+
+function myfunc () {
+    return 'hello garry'
+}
