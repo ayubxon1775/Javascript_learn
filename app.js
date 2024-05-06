@@ -366,9 +366,24 @@ function engKatta(sonlar){
 let engKatta5 = engKatta(5);
 console.log(engKatta5(13, 23)); // 23
 
+// Errow function
+
+let hisoblang = (a, b) => {
+    return a + b
+}
+console.log(hisoblang(5 , 5)); // 10
+
 // !!! Funksiyalar Javascriptda amaliy ish qilishning asosiy qismidir.
 // Ular kodni taqsimlash imkonini beradi.
 
 
+let myFunction = (a, b) => {
+    return a * b
+}
+console.log(myFunction(5, 6));// 30
 
-
+function toCelsius (f){
+    return (9-5) * (f-32)
+}
+let resultt = `bu bog'cha ${toCelsius(33)} boshqa bog'cha`;
+console.log(resultt); // bu bog'cha 4 boshqa bog'cha
