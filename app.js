@@ -408,7 +408,7 @@ function myfunc () {
 // Misol:
 
 let yosh = 18;
-if(yosh >= 19) {
+if(yosh >= 18) {
     console.log('siz yetasiz');
 }else{
     console.log('siz hali yetmagansiz');
@@ -418,9 +418,9 @@ if(yosh >= 19) {
 // Misol:
 
 let yoshi = 20;
-if (yoshi >= 18){
+if (yoshi >= 20){
 
-    if(yoshi < 50){
+    if(yoshi < 20){
         console.log('siz ishlaysiz');
     } else {
         console.log('siz pensiyanersiz');
@@ -428,3 +428,38 @@ if (yoshi >= 18){
 }else {
     console.log('siz hali ishlash yoshida emassiz');
 }
+
+// 3.Switch-case : Bir nechta qiymatlarni tekshirish uchun ishlatiladi.Kodni oson va 
+// oddiyroq qilish uchun ishlatiladi.
+// Misol:
+    let kun = 5;
+    switch (kun) {
+        case 1:
+            console.log("Dushanba");
+        break;
+        case 2:
+            console.log("Seshanba");
+        break;
+        case 3:
+            console.log("Chorshanba");
+        break;
+        case 4:
+            console.log("Payshanba");
+        break;
+        case 5:
+            console.log("Juma");
+        break
+        default:
+         console.log("Hafta kunlari"); // Juma
+    }
+
+// 4.Ternary operator (?): Ternary operatori shartni baho berish uchun ishlatiladi va 
+// undan keyingi qismdan birini qaytaradi.
+// Misol:
+    let age = 20;
+    let taqiq = (age >= 21) ? "Yettingiz" : "hali yetmadingiz";
+    console.log(taqiq); // Yettingiz
+
+// Shart operatorlari javaScriptda dasturlash jarayonida juda kuchli bolib shartlarni tekshirish
+// va amallarni bajarish imkoniyatini beradi. Har bir operatorning o'zining afzalliklari
+// va qonuniyatlari mavjud. Qo'llanish jarayonida, ulardan foydalanishni o'rganish juda muhimdir.
