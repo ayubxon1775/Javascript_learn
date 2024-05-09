@@ -396,3 +396,35 @@ console.log(myfunc());
 function myfunc () {
     return 'hello garry'
 }
+
+        // Javascript shart operatorlari
+
+// 1.shart operatorlari Javascriptda shartlar qurish va ularni tekshirish uchun ishlatiladi.
+// bunday shartlar amalga oshirilganida, biror amal bajariladi.Bu kodni boshqa yo'lda
+// o'zgartirishga imkon beradi.
+
+// 1. If-else: Eng oddiy shart operatoridir.Agar berilgan shart bajarilganda "true" qaytarsa "if"
+// blok ishga tushadi. Aks holda "else" bloki ishga tushadi.
+// Misol:
+
+let yosh = 18;
+if(yosh >= 19) {
+    console.log('siz yetasiz');
+}else{
+    console.log('siz hali yetmagansiz');
+}
+
+// 2.Nested if-else : Bir nechta if-else bloklarining birlashmasi. 
+// Misol:
+
+let yoshi = 20;
+if (yoshi >= 18){
+
+    if(yoshi < 50){
+        console.log('siz ishlaysiz');
+    } else {
+        console.log('siz pensiyanersiz');
+    }
+}else {
+    console.log('siz hali ishlash yoshida emassiz');
+}
