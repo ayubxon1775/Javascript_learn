@@ -463,3 +463,47 @@ if (yoshi >= 20){
 // Shart operatorlari javaScriptda dasturlash jarayonida juda kuchli bolib shartlarni tekshirish
 // va amallarni bajarish imkoniyatini beradi. Har bir operatorning o'zining afzalliklari
 // va qonuniyatlari mavjud. Qo'llanish jarayonida, ulardan foydalanishni o'rganish juda muhimdir.
+
+let hours = 11
+if (hours < 10){
+    console.log('hayrli tong');
+}else if (hours < 20){
+    console.log('hayrli kun');
+}else{
+    console.log("hayrli kech");
+}
+
+
+switch (0){
+    case 0:
+    case 6:
+        day = 'dam olish kunlari';
+        break;
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+        day = "ish kunlari";     
+        break
+
+        default:
+        day = "bayram kuni"
+}
+console.log(day);
+
+let xx = "0";
+switch (xx){
+    case 0:
+        text = "off";
+    break
+    case 1:
+        text = "on";
+    break
+    default:
+        text = "no value found"
+}
+console.log(text);
+console.log(Math.round(4.3))
+console.log(6!=5)
+
+
