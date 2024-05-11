@@ -502,8 +502,34 @@ switch (xx){
     default:
         text = "no value found"
 }
-console.log(text);
-console.log(Math.round(4.3))
-console.log(6!=5)
+            // Cikl operatorlar
+
+// Cikl operatorlari dasturlashda biror amalalrni bir necha marta takrorlash uchun ishlatiladi.
+// JavaScriptda "for", "while", va do-while cikllar keng ishlatiladi.
+
+        // "for" cikl
+// "for" cikli boshlang'ich qiymat, shart va qadam bilan bir necha marta takrorlanadi.
+// shart bajarilguncha takrorlanadi va qadam beriladi.
+// Kodning qisqa va oson bo'lishi uchun "for" cikl keng ishlatiladi.
+
+// 1 dan 5 gacha bo'lgan sonlar ketma-ketligini chiqarish
+for(let i = 0; i <= 5; i++){
+    console.log(i); // 0 1 2 3 4 5 
+}
 
 
+        // "while" cikl
+// "while" cikl faqatgina shart bajarilguncha takrorlanadi.
+// Shart bajarilguncha har bir takrorlashda shartni tekshiradi, agar shart rost bo'lsa cikl davom etadi.
+
+// 1 dan 5 gacha bo'lgan sonlar ketma-ketligini chiqarish
+
+let i = 1;
+while(i <= 5){
+    console.log(i);
+    i++
+}
+        // do-while cikli
+// "do-while" cikli "while" bilan o'xshash lekin farqi shuki shartni har bir takrorlashdan oldin emas 
+// balki har bir  takrorlashdan keyin tekshiradi.
+// shart rost bo'lmasa ham cikl bir marta bajariladi.
