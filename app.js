@@ -504,18 +504,33 @@ switch (xx){
 }
             // Cikl operatorlar
 
-// Cikl operatorlari dasturlashda biror amalalrni bir necha marta takrorlash uchun ishlatiladi.
+// Cikl operatorlari dasturlashda biror amallarni bir necha marta takrorlash uchun ishlatiladi.
 // JavaScriptda "for", "while", va do-while cikllar keng ishlatiladi.
 
         // "for" cikl
-// "for" cikli boshlang'ich qiymat, shart va qadam bilan bir necha marta takrorlanadi.
+// "for" cikli boshlang'ich qiymat shart va qadam bilan bir necha marta takrorlanadi.
 // shart bajarilguncha takrorlanadi va qadam beriladi.
 // Kodning qisqa va oson bo'lishi uchun "for" cikl keng ishlatiladi.
 
 // 1 dan 5 gacha bo'lgan sonlar ketma-ketligini chiqarish
 for(let i = 0; i <= 5; i++){
     console.log(i); // 0 1 2 3 4 5 
-}
+};
+
+    const cars = ["BMW", "Kia", "Toyoto", "GM"];
+
+    let text1 = "";
+    for (let i = 0; i < cars.length; i++){
+        text1 += cars[i] + " "  ;
+    }
+    console.log(text1);
+
+    let text5 = '';
+    for (let i = 10; i < 15; i++){
+        text5 += "The number is " + i + " " ;
+    }
+    console.log(text5);
+
 
 
         // "while" cikl
@@ -526,10 +541,19 @@ for(let i = 0; i <= 5; i++){
 
 let i = 1;
 while(i <= 5){
-    console.log(i);
+    console.log(i); // 1 2 3 4 5
     i++
 }
         // do-while cikli
 // "do-while" cikli "while" bilan o'xshash lekin farqi shuki shartni har bir takrorlashdan oldin emas 
 // balki har bir  takrorlashdan keyin tekshiradi.
 // shart rost bo'lmasa ham cikl bir marta bajariladi.
+// Eng kam foydalaniladigan cikl operatori.
+
+// 1 dan 5 gacha bo'lgan sonlar ketma-ketligini chiqarish.
+
+let j = 5
+do{
+    console.log(j); // 5 6 7 8 9 10
+    j++;
+}while (j <= 10);
