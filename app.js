@@ -557,3 +557,33 @@ do{
     console.log(j); // 5 6 7 8 9 10
     j++;
 }while (j <= 10);
+
+
+                 // Massivlar
+// JavaScriptda massivlar, biror malumotlar to'plamini (matnlar, sonlar, obyektlar
+// va boshqa massivlar) saqlash uchun ishlatiladi.
+// Massivlar o'z ichiga bir nechta elementlarni oladi va ularga tartib beriladi.
+// Har bir elementning indeksi, massivning boshidan boshlab 0 dan boshlanadi.
+
+// Massiv yaratish
+let mevalar = ['olma', 'banan', 'uzum', 'anor'];
+
+// Massivdagi bir elementga murojaat 
+console.log(mevalar[0]); // 'olma'
+console.log(mevalar[2]); // 'uzum'
+
+// Massivdagi elementlarni o'zgartirish
+mevalar[1] = 'behi';
+console.log(mevalar); // ['olma', 'behi', 'uzum', 'anor']
+
+// Massivning uzunligini aniqlash
+console.log(mevalar.length); // 4
+
+// Yangi element qo'shish
+mevalar.push('nok');
+console.log(mevalar);// ['olma', 'behi', 'uzum', 'anor', 'nok']
+
+// Massivdan element olish va uni o'chirish
+let olinganMeva = mevalar.pop();
+console.log(olinganMeva); // 'nok';
+console.log(mevalar); // ['olma', 'behi', 'uzum', 'anor']
