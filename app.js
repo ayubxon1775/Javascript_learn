@@ -560,10 +560,14 @@ do{
 
 
                  // Massivlar
+// Massiv - bu bir nechta qiymatga ega bo'lishi mumkin bo'lgan maxsus o'zgaruvchi
 // JavaScriptda massivlar, biror malumotlar to'plamini (matnlar, sonlar, obyektlar
 // va boshqa massivlar) saqlash uchun ishlatiladi.
 // Massivlar o'z ichiga bir nechta elementlarni oladi va ularga tartib beriladi.
 // Har bir elementning indeksi, massivning boshidan boshlab 0 dan boshlanadi.
+// Massivlar - bu ob'ektlarning maxsus turi. JavaScript-dagi operator typeofmassivlar uchun "ob'ekt" ni qaytaradi.
+// Massiv bitta nom ostida ko'p qiymatlarni saqlashi mumkin va siz indeks raqamiga murojaat qilish orqali qiymatlarga kirishingiz mumkin.
+// Massivlarni const kalit so'zi bilan e'lon qilish odatiy holdir 
 
 // Massiv yaratish
 let mevalar = ['olma', 'banan', 'uzum', 'anor'];
@@ -587,3 +591,20 @@ console.log(mevalar);// ['olma', 'behi', 'uzum', 'anor', 'nok']
 let olinganMeva = mevalar.pop();
 console.log(olinganMeva); // 'nok';
 console.log(mevalar); // ['olma', 'behi', 'uzum', 'anor']
+
+const personn = {
+    firstName:"ayubxon",
+    lastName: "Axmatxonov",
+    age: 24
+}
+console.log(personn.age);
+
+const fruits = ['banan ','apelsin ', 'behi ', 'orik']
+flen = fruits.length;
+
+text = ''
+for(let i = 0; i <flen; i++){
+    
+    text+= fruits[i]
+}
+console.log(text);
