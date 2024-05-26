@@ -599,12 +599,111 @@ const personn = {
 }
 console.log(personn.age);
 
-const fruits = ['banan ','apelsin ', 'behi ', 'orik']
-flen = fruits.length;
+const fruits = ['olma ', 'anor ', 'behi ', 'nok'];
+let flen = fruits.length
 
 text = ''
-for(let i = 0; i <flen; i++){
-    
-    text+= fruits[i]
+for(let i = 0; i < flen; i++){
+    text+=  fruits[i]
 }
 console.log(text);
+
+// Massivlar - raqamlangan indexlarga ega bo'lgan maxsus turdagi obyektlardir.
+// Qachon massivdan Qachon Obyektdan foydalanish kerak
+// Element nomlari satr(matn) bo'lishini hohlasangiz Obyektdan foydalanish zarur.
+// Element nomlari raqam bo'lishini hohlasangiz Massivdan foydalanish zarur.
+
+        // Massiv methodlar
+
+// push() methodi massivni oxirigi yangi element qo'shadi va uzunligini qaytaradi.
+const fruitsOne= ['olma ', 'anor ', 'behi ', 'nok'];
+fruitsOne.push('lemon');
+console.log(fruitsOne);
+
+// toString() massivlarni vergul bilan ajratilgan Stringlarga aylantiradi.
+const fruitsTwo = ['olma', 'behi', 'uzum', 'gilos'];
+console.log(fruitsTwo.toString());
+
+// at() massivdan indexlangan elementni qaytaradi.
+const fruitsThere = ['olma', 'behi', 'uzum', 'gilos'];
+console.log(fruitsThere.at(-2));
+
+// join() massivni stringga aylantiradi va ularni orasiga elementlar qo'shish imkonini ham beradi.
+const fruitsFour = ['olma', 'behi', 'uzum', 'gilos'];
+console.log(fruitsFour.join('.'));
+
+// pop() massivdan oxirgi elementni olib tashlaydi.
+const fruitsFive = ['olma', 'behi', 'uzum', 'gilos'];
+console.log(fruitsFive.pop());
+
+// shift() massivning birinchi elementini olib tashlaydi va qolgan barcha elementlarni pastki indexga o'tkazadi.
+const fruitsSix = ['olma', 'behi', 'uzum', 'gilos'];
+fruitsSix.shift()
+console.log(fruitsSix);
+
+// unshift() massivning boshida yangi element qo'shadi va eski elementlarni uchirib tashlaydi.Unshift element uzunligini ham qaytaradi.
+const fruitsSeven = ['olma', 'behi', 'uzum', 'gilos'];
+console.log(fruitsSeven.unshift('Anor'));
+
+// concat() mavjud massivlarni birlashtirish orqali yangi massiv yaratadi.
+const fruitsEight = ['olma', 'anor'];
+const fruitsNine = ['uzum', 'gilos'];
+
+console.log( fruitsEight.concat(fruitsNine));
+// !!!  mavjud massivlarni o'zgartirmaydi u har doim yangi massivni qaytaradi.
+const array1 = ["Cecilie", "Lone"];
+const array2 = ["Emil", "Tobias", "Linus"];
+const array3 = ["Robin", "Morgan"];
+
+const myChildren = array1.concat(array2, array3);
+console.log(myChildren);
+
+
+const array4 = ["Cecilie", "Lone"];
+console.log(array4.concat('ayubxon'));
+
+// !!! concat() argument sifatida qatorlarni ham qabul qilishi mumkin.
+
+// copyWithin() massiv elementlarini massivdagi boshqa joyga ko'chiradi.
+const fruitsTeen = ['olma', 'behi', 'uzum', 'gilos','apelsin','mandarin'];
+console.log(fruitsTeen.copyWithin(2,0));
+
+
+// copyWithin() mavjud qiymatlarni qayta yozadi.
+// copyWithin() qatorga elementlar qo'shmaydi.
+// copyWithin() massiv uzunligini o'zgartirmaydi
+
+// flat() malum bir chuqurlikka birlashtirilgan pastki qator elementlari bilan yangi massiv yaratadi.
+
+const myNumber = [[1,2],[3,4],[5,6]];
+console.log(myNumber.flat());
+
+// Splice() massivga yangi elementlar qo'shish uchun ishlatiladi.
+const fruitsEleven = ['olma', 'behi', 'uzum', 'gilos'];
+fruitsEleven.splice(2,2, 'nok', 'anor');
+console.log(fruitsEleven);
+
+// !!! Splice() yordamida massivdan elementlarni teshiklar qoldirmasdan olib tashlash mumkin.
+
+const fruitstwelve = ['olma', 'behi', 'uzum', 'gilos'];
+console.log(fruitstwelve.splice(0,1));
+
+
+// Yangi toSpliced() usuli eski splice() usuli o'rtasidagi farq shundaki, yangi usul asl massivni o'zgarmagan holda yangi massiv yaratadi.
+// eski usul esa asl massivni o'zgartirdi.
+const fruitsThirteen = ['olma', 'behi', 'uzum', 'gilos'];
+console.log(fruitsThirteen.toSpliced(0,1));
+
+// slice() massivning bir qismini yangi massivga ajratadi.
+
+const fruitsFourteen = ['olma', 'behi', 'uzum', 'gilos'];
+console.log(fruitsFourteen.slice(1,3));
+
+// !!! slice() yangi massivni yaratadi.
+// !!! slice() massivdan hech qanday elementni olib tashlamaydi
+
+
+
+
+
+
