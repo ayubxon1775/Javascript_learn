@@ -617,56 +617,55 @@ console.log(text);
 
 // push() methodi massivni oxirigi yangi element qo'shadi va uzunligini qaytaradi.
 const fruitsOne= ['olma ', 'anor ', 'behi ', 'nok'];
-fruitsOne.push('lemon');
+fruitsOne.push('lemon'); //['olma ', 'anor ', 'behi ', 'nok', 'lemon']
 console.log(fruitsOne);
 
 // toString() massivlarni vergul bilan ajratilgan Stringlarga aylantiradi.
 const fruitsTwo = ['olma', 'behi', 'uzum', 'gilos'];
-console.log(fruitsTwo.toString());
+console.log(fruitsTwo.toString());//olma,behi,uzum,gilos
 
 // at() massivdan indexlangan elementni qaytaradi.
 const fruitsThere = ['olma', 'behi', 'uzum', 'gilos'];
-console.log(fruitsThere.at(-2));
+console.log(fruitsThere.at(-2)); //uzum
 
 // join() massivni stringga aylantiradi va ularni orasiga elementlar qo'shish imkonini ham beradi.
 const fruitsFour = ['olma', 'behi', 'uzum', 'gilos'];
-console.log(fruitsFour.join('.'));
+console.log(fruitsFour.join('.')); // olma.behi.uzum.gilos
 
 // pop() massivdan oxirgi elementni olib tashlaydi.
 const fruitsFive = ['olma', 'behi', 'uzum', 'gilos'];
-console.log(fruitsFive.pop());
+console.log(fruitsFive.pop());// gilos
 
 // shift() massivning birinchi elementini olib tashlaydi va qolgan barcha elementlarni pastki indexga o'tkazadi.
 const fruitsSix = ['olma', 'behi', 'uzum', 'gilos'];
 fruitsSix.shift()
-console.log(fruitsSix);
+console.log(fruitsSix);// ['behi', 'uzum', 'gilos']
 
 // unshift() massivning boshida yangi element qo'shadi va eski elementlarni uchirib tashlaydi.Unshift element uzunligini ham qaytaradi.
 const fruitsSeven = ['olma', 'behi', 'uzum', 'gilos'];
-console.log(fruitsSeven.unshift('Anor'));
+console.log(fruitsSeven.unshift('Anor')); // 5
 
 // concat() mavjud massivlarni birlashtirish orqali yangi massiv yaratadi.
 const fruitsEight = ['olma', 'anor'];
 const fruitsNine = ['uzum', 'gilos'];
+console.log( fruitsEight.concat(fruitsNine)); //['olma', 'anor', 'uzum', 'gilos']
 
-console.log( fruitsEight.concat(fruitsNine));
 // !!!  mavjud massivlarni o'zgartirmaydi u har doim yangi massivni qaytaradi.
 const array1 = ["Cecilie", "Lone"];
 const array2 = ["Emil", "Tobias", "Linus"];
-const array3 = ["Robin", "Morgan"];
-
+const array3 = ["Robin", "Morgan"]; 
 const myChildren = array1.concat(array2, array3);
-console.log(myChildren);
+console.log(myChildren);// ['Cecilie', 'Lone', 'Emil', 'Tobias', 'Linus', 'Robin', 'Morgan']
 
 
 const array4 = ["Cecilie", "Lone"];
-console.log(array4.concat('ayubxon'));
+console.log(array4.concat('ayubxon')); //['Cecilie', 'Lone', 'ayubxon']
 
 // !!! concat() argument sifatida qatorlarni ham qabul qilishi mumkin.
 
 // copyWithin() massiv elementlarini massivdagi boshqa joyga ko'chiradi.
 const fruitsTeen = ['olma', 'behi', 'uzum', 'gilos','apelsin','mandarin'];
-console.log(fruitsTeen.copyWithin(2,0));
+console.log(fruitsTeen.copyWithin(2,0)); //['olma', 'behi', 'olma', 'behi', 'uzum', 'gilos']
 
 
 // copyWithin() mavjud qiymatlarni qayta yozadi.
@@ -676,34 +675,75 @@ console.log(fruitsTeen.copyWithin(2,0));
 // flat() malum bir chuqurlikka birlashtirilgan pastki qator elementlari bilan yangi massiv yaratadi.
 
 const myNumber = [[1,2],[3,4],[5,6]];
-console.log(myNumber.flat());
+console.log(myNumber.flat());// [1, 2, 3, 4, 5, 6]
 
 // Splice() massivga yangi elementlar qo'shish uchun ishlatiladi.
 const fruitsEleven = ['olma', 'behi', 'uzum', 'gilos'];
 fruitsEleven.splice(2,2, 'nok', 'anor');
-console.log(fruitsEleven);
+console.log(fruitsEleven);// ['olma', 'behi', 'nok', 'anor']
 
 // !!! Splice() yordamida massivdan elementlarni teshiklar qoldirmasdan olib tashlash mumkin.
 
 const fruitstwelve = ['olma', 'behi', 'uzum', 'gilos'];
-console.log(fruitstwelve.splice(0,1));
+console.log(fruitstwelve.splice(0,1));// ['olma']
 
 
 // Yangi toSpliced() usuli eski splice() usuli o'rtasidagi farq shundaki, yangi usul asl massivni o'zgarmagan holda yangi massiv yaratadi.
 // eski usul esa asl massivni o'zgartirdi.
 const fruitsThirteen = ['olma', 'behi', 'uzum', 'gilos'];
-console.log(fruitsThirteen.toSpliced(0,1));
+console.log(fruitsThirteen.toSpliced(0,1));// ['behi', 'uzum', 'gilos']
 
 // slice() massivning bir qismini yangi massivga ajratadi.
 
 const fruitsFourteen = ['olma', 'behi', 'uzum', 'gilos'];
-console.log(fruitsFourteen.slice(1,3));
+console.log(fruitsFourteen.slice(1,3));// ['behi', 'uzum']
 
 // !!! slice() yangi massivni yaratadi.
 // !!! slice() massivdan hech qanday elementni olib tashlamaydi
 
+// indexOf() massivda element qiymatini qidiradi va uning o'rnini qaytaradi.
 
+const fruitsFiveteen = ['olma', 'behi', 'uzum', 'gilos'];
+console.log(fruitsFiveteen.indexOf("gilos")); // 1
 
+// lastIndexOf()  indexOf bilan bir hil boladi, lekin belgilangan elementning oxirgi paydo bolish o'rnini qaytaradi.
+const fruitsSixteen = ['olma', 'behi', 'uzum', 'gilos','behi'];
+console.log(fruitsSixteen.lastIndexOf('behi')); // 4
 
+//includes() bu massivda elementlarni bor yoki yoqligini tekshirish imkonini beradi, (indexOf dan farqli o'laroq NaN ham kiradi.)
+const fruitsSeventeen = ['olma', 'behi', 'uzum', 'gilos','behi'];
+console.log(fruitsSeventeen.includes('behi')); // true
+
+// find usuli sinov funksiyadan o'tgan birinchi massiv elementining qiymatini qaytaradi.
+
+const numberss = [4, 9, 16, 25, 29];
+let firsts = numberss.find(myfunc18);
+
+console.log(firsts); // 25
+
+function myfunc18(value,index,array) {
+    return value > 18;
+}
+
+// findIndex() usuli sinov funksiyasidan o'tgan birinchi elementning index raqamini qaytaradi.
+
+const numbersOne = [4, 9, 16, 25, 29];
+let firstOne = numbersOne.findIndex(myfuncOne)
+
+console.log(firstOne); // 2
+
+function myfuncOne(value, index, array) {
+    return value > 15;
+}
+
+// findLast() usuli u massiv oxiridan boshlanadi va shartni qondiradigan birinchi elementni qaytaradi
+const temp = [27, 28, 30, 40, 42, 35, 30];
+let high = temp.findLast( x=> x > 40);
+console.log(high); // 42 
+
+// findLastIndex usuli shartni qanoatlantiradigan oxirgi elementni topadi.
+const tempOne = [27, 28, 30, 40, 42, 35, 30];
+let highOne = tempOne.findLastIndex(x => x > 38);
+console.log(highOne);
 
 
