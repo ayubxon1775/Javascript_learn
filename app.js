@@ -925,3 +925,79 @@ console.log(allOver18); // false
 function puncThree(  value, index, array) {
     return value > 18
 }
+
+
+            // Object
+
+// Obyektlar ham o'zgaruvchilardir. Lekin obyektlar juda ham ko'p qiymatlarni o'z ichiga olishi mumkin.
+
+const myObject = {
+    name: "ayubxon",
+    age: 24,
+    address: {
+        city: "Namangan",
+        street: "sharshara"
+    }
+
+};
+console.log(myObject.address.street);// sharshara
+
+// !!! Obyektlarni const kalit so'zi bilan elon qilish odatiy holdir.
+    // Javascript obyektini qanday aniqlash mumkin.
+        // 1. Obyekt literalidan foydalanish.
+        // 2. new kalit so'zidan foydalanish.
+        // 3. Obyekt konstruktoridan foydalanish.
+
+    // name:value - juftlari kalit qiymat deb ham ataladi.
+    // obyekt literallari obyektni ishga tushiruvchilar deb ataladi.
+
+    // ushbu misol bo'sh javaScript obyektini yaratadi.
+const personOne = {};
+
+personOne.name ='Ayubxon';
+personOne.age = 24;
+personOne.address= "Namangan";
+
+console.log(personOne.name); // Ayubxon
+
+const personTwo = new Object();
+personTwo.name = 'Yaxyoxon';
+personTwo.age = 21;
+personTwo.address = "Tashkent";
+
+console.log(personTwo.age);// 21
+
+// !!! new Object() dan foydalanishga uncha hojat yoq.
+// !!! o'qilishi soddaligi bajarilishi tezligi tufayli object ning literal usulidan foydalaning.    
+
+// Obyektga kirishni ikki yo'li mavjud bular
+    // 1.objectName.propertyName.
+    // 2.objectName["propertyName"]
+
+// JavaScript obyekt usullar.
+
+    const personThree = {
+        name:'Ayubxon',
+        age: 24,
+        address:"Namangan",
+        fullname: function() {
+            return this.name + " " + this.age
+        }
+    };
+    console.log(personThree.fullname()); // Ayubxon 24
+
+    // !!! yuqoridagi personThree obyektiga "this" ishora qiladi.
+
+// JavaScript obyektlari oz'garuvchandir.
+    // ular qiymatlar bo'yicha emas balki mos yozuvlar bo'yicha murojaat qilinadi.
+
+    const personFour = {
+        name:"ayubxon",
+        age: 24,
+        address:"Namangan"
+    };
+    
+    const prs = personFour;
+    prs.name = "abdushohid";
+
+    console.log(personFour.name); // abdushohid
