@@ -988,7 +988,7 @@ console.log(personTwo.age);// 21
 
     // !!! yuqoridagi personThree obyektiga "this" ishora qiladi.
 
-// JavaScript obyektlari oz'garuvchandir.
+// JavaScript obyektlari o'zgaruvchandir.
     // ular qiymatlar bo'yicha emas balki mos yozuvlar bo'yicha murojaat qilinadi.
 
     const personFour = {
@@ -1001,3 +1001,16 @@ console.log(personTwo.age);// 21
     prs.name = "abdushohid";
 
     console.log(personFour.name); // abdushohid
+
+    // Obyektga yangi hususiyat qoshish usuli
+    const personFive = {
+        name: "abdushohid",
+        age: 23,
+        address : "namangan"
+    }
+
+    personFive.job= "web developer"
+
+    console.log(personFive.job);
+
+    
