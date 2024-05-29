@@ -714,7 +714,7 @@ console.log(fruitsSixteen.lastIndexOf('behi')); // 4
 const fruitsSeventeen = ['olma', 'behi', 'uzum', 'gilos','behi'];
 console.log(fruitsSeventeen.includes('behi')); // true
 
-// find usuli sinov funksiyadan o'tgan birinchi massiv elementining qiymatini qaytaradi.
+// find() usuli sinov funksiyadan o'tgan birinchi massiv elementining qiymatini qaytaradi.
 
 const numberss = [4, 9, 16, 25, 29];
 let firsts = numberss.find(myfunc18);
@@ -741,10 +741,10 @@ const temp = [27, 28, 30, 40, 42, 35, 30];
 let high = temp.findLast( x=> x > 40);
 console.log(high); // 42 
 
-// findLastIndex usuli shartni qanoatlantiradigan oxirgi elementni topadi.
+// findLastIndex() usuli shartni qanoatlantiradigan oxirgi elementni topadi.
 const tempOne = [27, 28, 30, 40, 42, 35, 30];
 let highOne = tempOne.findLastIndex(x => x > 38);
-console.log(highOne);
+console.log(highOne);//4
 
 // sort() - massivni alifbo tartibida tartiblaydi.
 const tempTwo = [27, 28, 30, 40, 42, 35, 30];
@@ -866,7 +866,62 @@ carsOne.sort(function(a , b){
 console.log(carsOne[0]); // {type: 'Volvo', year: '2001'}
 
 
+// forEach() har bir massiv elementi uchun bir marta funksiyani (qayta qo'ng'iroq funksiyasi) chaqiradi.
 
 
+const tempFiveteen = [40, 100, 4, 5, 25, 10, 35, 28 , 43, 85];
+let text12 = "";
+
+tempFiveteen.forEach(myfuncTwo)
+console.log(text12);//4010045251035284385
+
+function myfuncTwo(value){
+    text12 +=value
+}
+
+const tempSixteen = [40, 100, 4, 5, 25, 10, 35, 28 , 43, 85];
+const tempEightteen = tempSixteen.map(myfuncThree);
+console.log(tempEightteen);// [80, 200, 8, 10, 50, 20, 70, 56, 86, 170]
+function myfuncThree(value){
+    return value * 2
+}
+
+// filter() sinovdan o'tgan massiv elementlari bilan yangi massiv yaratadi.
+const tempSeventeen = [40, 100, 4, 5, 25, 10, 35, 28 , 43, 85];
+const oven = tempSeventeen.filter(myfuncFour);
+const oven1 = oven.sort(mypunc)
+console.log(oven1); // [25, 28, 35, 40, 43, 85, 100]
 
 
+    function myfuncFour(value, index, array) {
+        return value > 18
+    }
+    function mypunc(a, b) {
+        return a - b
+    }
+
+// reduce() har bir massiv elementida bitta qiymat hosil qilish uchun (kamaytirish) funksiyani ishga tushiradi.
+// reduce() chapdan o'ngga ishlaydi.
+const tempNineteen = [40, 100, 4, 5, 25, 10, 35, 28 , 43, 85];
+let sum = tempNineteen.reduce(mypuncOne);
+console.log(sum); // 375
+function mypuncOne(total, value) {
+    return total + value
+}
+
+// reduce() usuli boshlang'ich qiymatni qabul qilishi mumkin.
+const tempTwenty = [40, 100, 4, 5, 25, 10, 35, 28 , 43, 85];
+let sumOne = tempTwenty.reduce(puncTwo, 10);
+console.log(sumOne);// 385
+
+function puncTwo(total, value, index, array ) {
+    return total + value
+};
+
+const tempTwentyOne = [40, 100, 4, 5, 25, 10, 35, 28 , 43, 85];
+let allOver18 = tempTwentyOne.every(puncThree);
+console.log(allOver18); // false
+
+function puncThree(  value, index, array) {
+    return value > 18
+}
