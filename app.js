@@ -746,4 +746,127 @@ const tempOne = [27, 28, 30, 40, 42, 35, 30];
 let highOne = tempOne.findLastIndex(x => x > 38);
 console.log(highOne);
 
+// sort() - massivni alifbo tartibida tartiblaydi.
+const tempTwo = [27, 28, 30, 40, 42, 35, 30];
+console.log(tempTwo.sort()); // [27, 28, 30, 30, 35, 40, 42]
+
+// reverse() massivdagi elementlarni teskari aylantiradi.
+const tempThree = [27, 28, 30, 40, 42, 35, 30];
+console.log(tempThree.reverse());// [30, 35, 42, 40, 30, 28, 27]
+
+// sort() va reverse() ni birlashtirish orqali siz massivni kamayish tartibida saralashingiz mumkin.
+const tempFour = [27, 28, 30, 40, 42, 35, 30];
+console.log(tempFour.sort().reverse());// [42, 40, 35, 30, 30, 28, 27]
+
+// toSorted() asl massivni o'zgartirmasdan massivni saralashni havfsiz usuli sifatida usulni qo'shdi.
+const tempFive = [27, 28, 30, 40, 42, 35, 30];
+console.log(tempFive.toSorted());// [27, 28, 30, 30, 35, 40, 42]
+// !!! toSorted() va sort() o'rtasidagi farq shundaki, birinchi usul asl massivni o'zgarmagan holda yangi massiv yaratadi,
+// oxirgi usul asl massivni o'zgartiradi.
+
+// toReversed() asl massivni o'zgartirmasdan massivni teskari aylantirish havfsiz usuli sifatida usulni qo'shdi.
+const tempSix = [27, 28, 30, 40, 42, 35, 30];
+console.log(tempSix.toReversed()); //[30, 35, 42, 40, 30, 28, 27]
+// !!! toReversed() va reversed() o'rtasidagi farq shundaki, birinchi usul asl massivni o'zgarmagan holda yangi massiv yaratadi.
+// oxirgi usul asl massivni o'zgartiradi.
+
+
+// sort() metodi stringlar uchun odatiy usulda ishlaveradi misol uchun banan olma dan oldin keladi.
+// Lekin numberlar uchun u boshqacha ishlaydi yani avval boshida 1 raqami ishtirok etgan sonlarni tartibi bo'yicha ishlaydi keyin qolganlarini chiqaradi 
+// yani  [1, 4, 5, 11, 12,] shu holatda bo'lsa sort() metodi bu massivni bu ko'rinishda [1, 11, 12, 4, 5] saqlaydi albatta bu hato
+// bu masalani hal qilish uchun esa quyida funksiya ko'rinishadi yechiladi.
+const tempSeven = [1, 4, 5, 11, 12,];
+console.log(tempSeven.sort());// [1, 11, 12, 4, 5]
+
+tempSeven.sort(function (a, b) {
+    return b-a
+})
+console.log(tempSeven);// [1, 4, 5, 11, 12]
+// Agar tartibni teskari usulda qilmoqchi bo'lsangiz ( b - a ) ga aylantirish kifoya shunda qiymat [12, 11, 5, 4, 1] holatiga aylanadi.
+
+// misol
+const tempEight = [40, 100, 1, 5, 25, 10];
+console.log(tempEight.sort()); // [1, 10, 100, 25, 40, 5]
+
+const tempNine = [40, 100, 1, 5, 25, 10];
+tempNine.sort(function(a, b){
+    return a-b
+})
+console.log(tempNine); // [1, 5, 10, 25, 40, 100]
+
+// Fisher Yates usulida tartiblash
+const tempTeen = [40, 100, 1, 5, 25, 10];
+function randomSort() {
+    for(let i = tempTeen.length-1; i > 0; i-- ){
+        let j = Math.floor(Math.random() * (i+1));
+        let k = tempTeen[i];
+        tempTeen[i] = tempTeen[j];
+        tempTeen[j] = k;
+    }
+    console.log(tempTeen);// har hil chiqadi .[1, 10, 5, 100, 40, 25]
+
+}
+randomSort()
+
+// Massivni tasodifiy usulda tartiblash
+const tempEleven = [40, 100, 1, 5, 25, 10];
+function randomSortOne(){
+     tempEleven.sort(function() {
+       return 0.5 - Math.random() 
+    })
+    console.log(tempEleven);// har hil chiqadi [10, 40, 5, 1, 25, 100]
+}
+randomSortOne()
+
+// Massivning eng past qiymatini toping
+const tempTwelve = [40, 100, 4, 5, 25, 10, 35, 28 , 43, 85];
+tempTwelve.sort(function(a, b){
+    return a - b
+})
+console.log(tempTwelve[0]);// 4
+
+// Massivning eng yuqori qiymatini toping
+
+const tempThirteen = [40, 100, 4, 5, 25, 10, 35, 28 , 43, 85];
+tempTwelve.sort(function(a, b){
+    return b - a
+})
+console.log(tempTwelve[0]);// 100
+
+
+// Math.min.apply() Massivning eng past qiymatini topadi
+// Math.max.apply() Massivning eng yuqori qiymatini topadi
+
+const tempFourteen = [40, 100, 4, 5, 25, 10, 35, 28 , 43, 85];
+function myArrMin(arr){
+    return Math.min.apply(null, arr)
+}
+console.log(myArrMin(tempFourteen)); // 4
+
+const carsOne = [
+    {
+        type: 'MBW',
+        year: '2010'
+    },
+    {
+        type: 'GM',
+        year: '2015'
+    },
+    {
+        type: 'Volvo',
+        year: '2001'
+    },
+   
+]
+
+carsOne.sort(function(a , b){
+    return a.year - b.year
+}) 
+
+console.log(carsOne[0]); // {type: 'Volvo', year: '2001'}
+
+
+
+
+
 
