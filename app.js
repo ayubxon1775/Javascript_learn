@@ -1001,8 +1001,12 @@ console.log(personTwo.age);// 21
     prs.name = "abdushohid";
 
     console.log(personFour.name); // abdushohid
-
-    // Obyektga yangi hususiyat qoshish usuli
+    
+    // obyekt bu tartibsiz hususiyatlar to'plamidir.
+    // Xususiyatlar javascript obyektlarining eng muhim qismidir.
+    // Xususiyatlarni o'zgartirish qo'shish o'chirish va bazilarini faqat o'qish mumkin.
+    
+        // Obyektga yangi hususiyat qoshish usuli
     const personFive = {
         name: "abdushohid",
         age: 23,
@@ -1012,5 +1016,33 @@ console.log(personTwo.age);// 21
     personFive.job= "web developer"
 
     console.log(personFive.job);
+    // delete() kalit so'zi Obyektdan hususiyatni o'chirish uchun ishlatiladi.
+    delete personFive.job;
+        console.log(personFive);
+
+    const personSix = {
+        name: "Ayubxon",
+        age: 24,
+        address: "Sharshara"
+    }
+    
+    
+    // Object.values() hossa qiymatlaridan massiv yaratadi.
+       const personSeven = {
+           name: "Ayubxon",
+            age: 24,
+        address: "Sharshara"
+    }
+    const myArray =Object.values(personSeven)
+    console.log(myArray);
+
+    // Object.entries()ob'ektlarni tsikllarda ishlatishni osonlashtiradi:
+    const fruitsEvem = {Bananas:300, Oranges:200, Apples:500}; 
+
+let textTex = "";
+for (let [fruit, amount] of Object.entries(fruitsEvem)) {
+  text += fruit + ": " + amount 
+}
+console.log(textTex);
 
     
