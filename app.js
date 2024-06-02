@@ -1045,4 +1045,21 @@ for (let [fruit, amount] of Object.entries(fruitsEvem)) {
 }
 console.log(textTex);
 
-    
+// JavaScript obyektlari JSON usuli bilan satrga aylantirilishi mumkin.JSON.stringify().
+
+const personEight = {
+    name: "yaxyo",
+    age: 21,
+    address: "sharshara"
+}
+console.log(JSON.stringify(personEight));
+
+// Obyekt konstruktor funksiyasi
+function myObjectOne (name, age, eye, job){
+    this.firstName = name,
+    this.age = age,
+    this.eyeColor = eye,
+    this.job = job
+}
+const myFather = new myObjectOne('Yunusxon', 45, 'black', 'chevar')
+    console.log(myFather.firstName);
