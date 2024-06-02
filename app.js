@@ -1015,10 +1015,10 @@ console.log(personTwo.age);// 21
 
     personFive.job= "web developer"
 
-    console.log(personFive.job);
+    console.log(personFive.job);//web developer
     // delete() kalit so'zi Obyektdan hususiyatni o'chirish uchun ishlatiladi.
     delete personFive.job;
-        console.log(personFive);
+        console.log(personFive);//{name: 'abdushohid', age: 23, address: 'namangan'}
 
     const personSix = {
         name: "Ayubxon",
@@ -1034,7 +1034,7 @@ console.log(personTwo.age);// 21
         address: "Sharshara"
     }
     const myArray =Object.values(personSeven)
-    console.log(myArray);
+    console.log(myArray);//['Ayubxon', 24, 'Sharshara']
 
     // Object.entries()ob'ektlarni tsikllarda ishlatishni osonlashtiradi:
     const fruitsEvem = {Bananas:300, Oranges:200, Apples:500}; 
@@ -1052,7 +1052,7 @@ const personEight = {
     age: 21,
     address: "sharshara"
 }
-console.log(JSON.stringify(personEight));
+console.log(JSON.stringify(personEight));//{"name":"yaxyo","age":21,"address":"sharshara"}
 
 // Obyekt konstruktor funksiyasi
 function myObjectOne (name, age, eye, job){
@@ -1062,4 +1062,28 @@ function myObjectOne (name, age, eye, job){
     this.job = job
 }
 const myFather = new myObjectOne('Yunusxon', 45, 'black', 'chevar')
-    console.log(myFather.firstName);
+    console.log(myFather.firstName);//Yunusxon
+
+        // DOM (document object model)
+    
+// DOM - bu dasturlar va skriptlarga hujjat mazmuni, tuzilishi va uslubiga dinamik ravishda kirish va yangilash imkonini beruvchi plastforma va tilga
+// neytral interfeys.
+    // DOM standarti 3 xil qismga bo'linadi.
+        // . Core DOM - barcha hujjat turlari uchun standart model.
+        // . XML DOM XML hujjatlari uchun standart model.
+        // . HTML DOM HTML hujjatlari uchun standart model.
+// HTML DOM - bu HTML uchun standart obyekt modeli va dasturlash interfeysi.U belgilaydi.
+        // HTML elementlari obyekt sifatida.
+        // Barcha HTML elementlarining xossalari.
+        // Barcha HTML elementlariga kirish usullari.
+        // Barcha HTML elementlar uchun voqealar.
+    // !!! Boshqacha qilib aytganda: HTML DOM HTML elementlarini olish, o'zgartirish, qo'shish yoki o'chirish uchun standartdir.
+    //  HTML DOM ga JavaScript (va boshqa dasturlash tillari bilan) orqali kirish mumkin.
+
+    // Quyidagi misol "<p>" elementni mazmunini "id = "demo" " innerHTML ga o'zgaritiradi.
+    
+    document.getElementById("demo").innerHTML = "Hello world";
+
+    // Yuqoridagi misolda getElementById bu usul, innerHTML esa xususiyatdir.
+    // id HTML elementiga kirishning eng keng tarqalgan usuli bu elementdan foydalanishdir .
+    // innerHTML Xususiyat har qanday HTML elementini, jumladan <html> va <body> ni olish yoki o'zgartirish uchun ishlatilishi mumkin .
