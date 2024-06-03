@@ -1087,3 +1087,20 @@ const myFather = new myObjectOne('Yunusxon', 45, 'black', 'chevar')
     // Yuqoridagi misolda getElementById bu usul, innerHTML esa xususiyatdir.
     // id HTML elementiga kirishning eng keng tarqalgan usuli bu elementdan foydalanishdir .
     // innerHTML Xususiyat har qanday HTML elementini, jumladan <html> va <body> ni olish yoki o'zgartirish uchun ishlatilishi mumkin .
+    // HTML elementlarini topishning bir nechta usullari mavjud.
+        // Id bo'yicha HTML elementlarini topish.
+            // document.getElementById()
+        
+        // HTML elementlarini teg nomi bo'yicha topish.
+            // document.getElementsByTagName()
+
+        // HTML elementlarini sinf nomi bo'yicha topish.
+            // getElementsByClassName().
+
+        // CSS selektorlari orqali HTML elementlarini topish.
+            // querySelectorAll()
+
+        // HTML ob'ektlar to'plamlari bo'yicha HTML elementlarini topish.
+            // id="frm1"
+
+            
